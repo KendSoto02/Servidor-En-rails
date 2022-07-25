@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 2022_07_24_184141) do
   create_table "dishes", force: :cascade do |t|
     t.string "picture"
     t.string "name"
-    t.string "existence"
     t.string "description"
     t.decimal "price"
     t.datetime "created_at", null: false
