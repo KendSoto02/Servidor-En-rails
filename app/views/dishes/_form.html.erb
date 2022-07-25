@@ -44,15 +44,7 @@
       </div>
     </div>
 
-    <div class="item form-group<%= @dish.errors[:existence].any? ? ' has-error has-feedback' : '' %>">
-      <%= f.label :existence, "Stock inicial: " %>
-      <div class="input-group">
-        <%= f.number_field :existence, {class: "form-control", :placeholder=>"Stock inicial"} %>
-        <%if @dish.errors[:existence].any? %>
-          <p class="bg-danger"><%= @dish.errors[:existence].to_s[/\w([^"]*)/] %></p>
-        <% end %>
-      </div>
-    </div>
+    
     <div class="actions col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
       <%= f.submit @dish.new_record? ? "Crear plato" : "Actualizar plato", :class => "btn btn-success"%>
     </div>  

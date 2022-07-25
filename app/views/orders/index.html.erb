@@ -28,7 +28,7 @@
                 <td><%= ord.client.name %></td>
                 <td><%= ord.dish.name %></td>
                 <td><%= ord.quantity %></td>
-                <td><%= ord.statusOrder %></td>
+                <td><%= t("activerecord.attributes.order.statusOrders.#{ord.statusOrder}") %></td>
                 <td>
                 <%= link_to "editar", edit_order_path(ord), html_options = {class: "btn btn-info btn-xs", remote: true} %>
                 <%= link_to "Borrar", ord, remote: true, method: :delete, data: { confirm: "¿Borrar orden de cliente: #{ord.client.name}?"}, class: "btn btn-danger btn-xs" %>

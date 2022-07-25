@@ -20,8 +20,13 @@ es:
         one: Hospital
         other: Hospitales
     attributes:
-      hospital:
-        name: Nombre
+      order:
+        statusOrders:
+          anuled: Anulada
+          onTime: A tiempo
+          overTime: Sobre Tiempo
+          delayed: Demorado
+          delivered: Entregado
       client:
         statusClients:
           active: Habilitada
