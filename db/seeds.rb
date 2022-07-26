@@ -5,7 +5,7 @@ Client.create(name: "Antonio", direction: "sesteo #4, Santa Cruz, Costa Rica", s
 Client.create(name: "Kendal", direction: "sesteo #5, Abangares, Costa Rica", statusClient: 0 ,rolUser: 1, email: "kendal@gmail.com")
 Client.create(name: "Isac", direction: "sesteo #6, Tilaran, Costa Rica", statusClient: 1 ,rolUser: 0, email: "isac@gmail.com")
 
-Dish.create(picture: "https://storage.googleapis.com/bucket-libro-rails1/uploads/dish/picture/1/nachos.jpg", name: "Nachos",  description: "Tortillas, Frijoles, Pico de gallo, Queso", price: 1000)
+Dish.create(picture: 'https://storage.googleapis.com/bucket-libro-rails1/uploads/dish/picture/1/nachos.jpg', name: "Nachos",  description: "Tortillas, Frijoles, Pico de gallo, Queso", price: 1000)
 Dish.create(picture: "https://storage.googleapis.com/bucket-libro-rails1/uploads/dish/picture/1/pizza.png", name: "Pizza",  description: "Peperoni, Jamon, Queso, Hongos...", price: 5000)
 Dish.create(picture: "https://storage.googleapis.com/bucket-libro-rails1/uploads/dish/picture/1/chifrijo.jpg", name: "Chifrijo",  description: "Frijoles, Chicharon, Aguacate, Pico de gallo", price: 4000)
 Dish.create(picture: "https://storage.googleapis.com/bucket-libro-rails1/uploads/dish/picture/1/casado.png", name: "Casado",  description: "Arroz, Frijoles, Carne a escoger", price: 3000)

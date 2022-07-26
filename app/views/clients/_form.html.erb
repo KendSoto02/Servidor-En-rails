@@ -1,7 +1,7 @@
 <%= form_for @cliente, { remote: true, multiple: true }  do |f| %>
 
     <div class="form-group">
-      <h4 class="control-label">Datos del cliente:</h4>
+      <h4 class="control-label">Datos del usuario:</h4>
     </div>
 
     <div class="item form-group<%= @cliente.errors[:name].any? ? ' has-error has-feedback' : '' %>">

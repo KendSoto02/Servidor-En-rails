@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
 
       if @order.save
-        render 'api/orders/show', status: :created
+        render 'api/orders/index', status: :created
       else
         render json: @order.errors.full_messages, status: :unprocessable_entity 
       end
@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
 
   def update
       if @order.update(order_params)
-        render 'api/orders/show', status: :created
+        render 'api/orders/index', status: :created
       else
         render json: @order.errors.full_messages, status: :unprocessable_entity 
       end
@@ -39,7 +39,7 @@ class OrdersController < ApplicationController
 
   def destroy
     @order.destroy
-    render 'api/orders/show', status: :created
+    render 'api/orders/index', status: :created
   end
 
 
