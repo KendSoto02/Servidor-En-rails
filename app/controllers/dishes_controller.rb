@@ -22,7 +22,6 @@ class DishesController < ApplicationController
         format.json {head :no_content}
         format.js
       else
-        debugger
         format.json { render json: @dish.errors.full_messages, status: :unprocessable_entity }
         format.js { render :new }
       end
