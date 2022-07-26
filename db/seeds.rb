@@ -1,30 +1,21 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-Category.create([{ nombre: 'lacteos', descripcion: 'leches, quesos, mantequilla y otros derivados' }, 
-                        { nombre: 'calzado', descripcion: 'zapatos, botas y otros accesorios relacionados' },
-                        { nombre: 'frituras', descripcion: 'botanas' }, 
-                        { nombre: 'alimento para mascotas', descripcion: 'todo en alimento para mascotas' }, 
-                        { nombre: 'Endulzantes', descripcion: 'Azúcar, endulzantes, mieles para endulzar' }, 
-                        { nombre: 'Huevos', descripcion: 'Huevos' },
-                        { nombre: 'Pastas', descripcion: 'Sopas, spaguetti, tallarines y productos relacionados' },
-                        { nombre: 'Frutas', descripcion: 'Frutas' },
-                        { nombre: 'Verduras', descripcion: 'Verduras' },
-                        { nombre: 'Confitería', descripcion: 'Caramelos, dulces' },
-                        { nombre: 'Harinas', descripcion: 'Galletas, pan' },
-                        { nombre: 'Bebidas', descripcion: 'agua, bebidas en polvo, naranjadas' },
-                        { nombre: 'Bebidas Alcohólicas', descripcion: 'vino, brandy, ron' }])
+Client.create(name: "Greivin", direction: "sesteo #2, San Ramon, Costa Rica", statusClient: 0 ,rolUser: 0, email: "roi@gmail.com")
+Client.create(name: "Juan", direction: "sesteo #1, San Jose, Costa Rica", statusClient: 1 ,rolUser: 1, email: "juan@gmail.com")
+Client.create(name: "Pedro", direction: "sesteo #3, San Pedro, Costa Rica", statusClient: 0 ,rolUser: 0, email: "pedro@gmail.com")
+Client.create(name: "Antonio", direction: "sesteo #4, Santa Cruz, Costa Rica", statusClient: 1 ,rolUser: 1, email: "antonio@gmail.com")
+Client.create(name: "Kendal", direction: "sesteo #5, Abangares, Costa Rica", statusClient: 0 ,rolUser: 1, email: "kendal@gmail.com")
+Client.create(name: "Isac", direction: "sesteo #6, Tilaran, Costa Rica", statusClient: 1 ,rolUser: 0, email: "isac@gmail.com")
 
-Client.create([{nombre: "Juan Carlos Osorio", direccion: "Cerrada de colombia 42", telefono: "9878200193" }, 
-                      { nombre: "Adolfo Frías Beltrán", direccion: "Circuito interior 47", telefono: "45757869878" }, 
-                      { nombre: "Alfonso Rojo de la Vega", direccion: "Obispos de ayer 76", telefono: "5432423456" },
-                      { nombre: "Alfred C. Crowle", direccion: "Hitchcook con 776", telefono: "3452365645" }])
+Dish.create(picture: 'https://storage.googleapis.com/bucket-libro-rails1/uploads/dish/picture/1/nachos.jpg', name: "Nachos",  description: "Tortillas, Frijoles, Pico de gallo, Queso", price: 1000)
+Dish.create(picture: "https://storage.googleapis.com/bucket-libro-rails1/uploads/dish/picture/1/pizza.png", name: "Pizza",  description: "Peperoni, Jamon, Queso, Hongos...", price: 5000)
+Dish.create(picture: "https://storage.googleapis.com/bucket-libro-rails1/uploads/dish/picture/1/chifrijo.jpg", name: "Chifrijo",  description: "Frijoles, Chicharon, Aguacate, Pico de gallo", price: 4000)
+Dish.create(picture: "https://storage.googleapis.com/bucket-libro-rails1/uploads/dish/picture/1/casado.png", name: "Casado",  description: "Arroz, Frijoles, Carne a escoger", price: 3000)
+Dish.create(picture: "https://storage.googleapis.com/bucket-libro-rails1/uploads/dish/picture/1/papas.jpg", name: "Papas",  description: "Papas, Queso, Pico de gallo", price: 2000)
+Dish.create(picture: "https://storage.googleapis.com/bucket-libro-rails1/uploads/dish/picture/1/arroz%20con%20pollo.jpg", name: "Arroz con pollo",  description: "Arroz, Pollo, Olores", price: 5000)
 
-20.times do |i|
-  Supplier.create(nombre: Faker::Name.name, direccion: Faker::Address.street_address, telefono: Faker::PhoneNumber.cell_phone )
-end
+Order.create(statusOrder: 0, date: "2020/05/01",  quantity: 1, client_id: 1, dish_id: 1)
+Order.create(statusOrder: 1, date: "2020/05/02",  quantity: 2, client_id: 2, dish_id: 2)
+Order.create(statusOrder: 2, date: "2020/05/05",  quantity: 3, client_id: 3, dish_id: 3)
+Order.create(statusOrder: 3, date: "2020/05/10",  quantity: 4, client_id: 4, dish_id: 4)
+Order.create(statusOrder: 2, date: "2020/05/20",  quantity: 5, client_id: 5, dish_id: 5)
+Order.create(statusOrder: 2, date: "2020/05/01",  quantity: 2, client_id: 6, dish_id: 6)
 

@@ -25,7 +25,6 @@ class OrdersController < ApplicationController
         format.json {head :no_content}
         format.js
       else
-        debugger
         format.json { render json: @order.errors.full_messages, status: :unprocessable_entity }
         format.js { render :new }
       end
@@ -64,6 +63,7 @@ class OrdersController < ApplicationController
       format.json { render :json => @resultados }
     end
   end
+
 
   private
     def order_params

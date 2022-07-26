@@ -1,7 +1,11 @@
 class SearchController < ApplicationController
   def results
-    @productos = Product.buscador(params[:termino])
-    @clientes = Client.buscador(params[:termino])
-    @proveedores = Supplier.buscador(params[:termino])
+    @orders = Order.buscador(params[:termino])
+  end
+  def resultsDish
+    @dishes = Dish.buscador(params[:termino])
+  end
+  def resultsOrder
+    @orders = Order.buscador(params[:termino])
   end
 end

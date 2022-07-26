@@ -22,7 +22,6 @@ class DishesController < ApplicationController
         format.json {head :no_content}
         format.js
       else
-        debugger
         format.json { render json: @dish.errors.full_messages, status: :unprocessable_entity }
         format.js { render :new }
       end
@@ -53,8 +52,7 @@ class DishesController < ApplicationController
     @resultados = Dish.buscador(params[:termino]).map do |dish|
       {
         id: dish.id,
-        name_dish: dish.name,
-        existence: dish.existence
+        name_dish: dish.name
       }
     end
 

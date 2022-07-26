@@ -8,6 +8,6 @@ class Order < ApplicationRecord
     validates :statusOrder, presence: true
 
     def self.buscador(termino)
-        Order.where("nombre LIKE ?", "%#{termino}%")
+        Order.where("date LIKE ?", "%#{termino}%")
     end
 end
