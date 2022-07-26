@@ -53,8 +53,7 @@ class DishesController < ApplicationController
     @resultados = Dish.buscador(params[:termino]).map do |dish|
       {
         id: dish.id,
-        name_dish: dish.name,
-        existence: dish.existence
+        name_dish: dish.name
       }
     end
 

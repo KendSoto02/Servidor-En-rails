@@ -11,22 +11,23 @@
     <table class="table table-bordered" id="tablaDishes" width="100%" cellspacing="0">
         <thead>
         <tr>
-            <th></th>
+            <th>Foto</th>
             <th>Nombre plato</th>
             <th>Descripción</th>
             <th>Precio</th>
+            <th>Acciones</th>
         </tr>
         </thead>
         <tbody>
-            <% @dishes.each do |dish| %>
-            <tr id="dish_<%= dish.id %>" >
-                <td><%= image_tag(dish.picture.url, size: "50x50", class: "rounded-circle") if dish.picture? %></td>
-                <td><%= dish.name %></td>
-                <td><%= dish.description %></td>
-                <td>$<%= dish.price %></td>
+            <% @dishes.each do |dis| %>
+            <tr id="dish_<%= dis.id %>" >
+                <td><%= image_tag(dis.picture.url, size: "50x50", class: "rounded-circle") if dis.picture? %></td>
+                <td><%= dis.name %></td>
+                <td><%= dis.description %></td>
+                <td>$<%= dis.price %></td>
                 <td>
-                <%= link_to "editar", edit_dish_path(dish), html_options = {class: "btn btn-info btn-xs", remote: true} %>
-                <%= link_to "Borrar", dish, remote: true, method: :delete, data: { confirm: "¿Borrar plato: #{dish.name}?"}, class: "btn btn-danger btn-xs" %>
+                <%= link_to "editar", edit_dish_path(dis), html_options = {class: "btn btn-info btn-xs", remote: true} %>
+                <%= link_to "Borrar", dis, remote: true, method: :delete, data: { confirm: "¿Borrar plato: #{dis.name}?"}, class: "btn btn-danger btn-xs" %>
                 </td>
             </tr>
             <% end %>
